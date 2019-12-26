@@ -1,0 +1,2 @@
+C:\Users\soulr\source\repos\GamesChatWebsite\GamesChatWebsite\obj\Debug\GamesChatWebsite.njsprojAssemblyReference.cache
+C:\Users\soulr\source\repos\GamesChatWebsite\GamesChatWebsite\bin\Microsoft.NodejsTools.WebRole.dll
