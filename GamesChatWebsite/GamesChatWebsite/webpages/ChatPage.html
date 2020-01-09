@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script> <!--Socket.io -->
+ 
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body id="ChatPageBody">
+    <div class="NavBar">
+        <a id="XboxLink" href="XboxPage.html">Xbox</a>
+        <a id="PlayStationLink" href="PlayStationPage.html">PlayStation</a>
+        <a id="NintendoLink" href="NintendoPage.html">Nintendo</a>
+        <a id="PCLink" href="PCPage.html">PC</a>
+    </div>
+    <div id="chatHeader"> <p>Game Review Chat</p></div>
+    <br>
+
+    <div id="loginPage">
+        <div id="LoginForm">
+            <h3 class="title">Whats your nickname?</h3>
+            <input class="usernameInput" type="text" maxlength="15" />
+        </div>
+    </div>
+    <br>
+    <div id="ChatRoom">
+        <form id="messageForm">
+            <input type="text" id="messageInput" placeholder="Type message here..." />
+            <button type="submit" id="Sendbtn" onclick="hidel()"> Send </button>
+        </form>
+        <div class="chat" id="chat" style="overflow-y:scroll; height:450px;">
+            <div id="messageBox"></div>
+        </div>
+
+        <div class="tooltips">
+            <button type="submit" id="showBtn" onclick="showl()"> Show All </button>
+            <span class="tooltipShowBtn">Click this to enable chat scroll</span>
+        </div>
+    </div>
+
+    <!--<script type="text/javascript" src="/index.js"></script>-->
+    <script type="text/javascript" src="/chatRoom.js"></script>
+    <script>
+        function hidel()
+        {
+        var chat = document.getElementById("chat");
+        chat.scrollTop = chat.scrollHeight;
+        var people = document.getElementById("people");
+        people.scrollTop = people.scrollHeight;
+        }
+        function showl()
+        {
+        showlog = true;
+        };
+    </script>
+
+
+
+</body>
+</html>
